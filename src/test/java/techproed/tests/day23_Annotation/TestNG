@@ -1,0 +1,44 @@
+
+
+                                -----  TestNG  -----
+
+* Junit’in gelismis versiyonudur.
+* İsmi Next Generation Test kelimelerinden türetilmiş, ve Cédric Beust tarafından oluşturulmuştur.
+* Açık Kaynak kodludur.
+* TestNG bir test kütüphanesidir.
+* TestNG sadece JAVA ile calisir ve JDK 7 ve daha ust versiyonlari gereklidir
+* TestNG ile ilgili dokumanlara asagidaki adresten ulasilabilir
+* https://testng.org/doc/documentation-main.html
+
+
+
+* TestNG tester’lara daha fazla kontrol imkani verir ve testleri daha etkili yapmamizi saglar.
+* Tester’lar TestNG’yi etkili bir framework tasarlamak ve test case’leri TestNG annotation’ları ile organize etmek için kullanırlar.
+* Test caseleri siralama ozelligi (priority) ve test caselerin birbirine bagimliligi (dependsOnMethod) bize testleri organize etmekte
+yardim eder.
+* Paralel ve Cross-Browser Test yapmamiza imkan tanir
+* Kullanisli HTML veya xml raporlari olusturmaya yarar
+* Data Provider ile DDT(data driven testing) imkani saglar
+
+
+                 ------ @Test annotation ------
+* En cok kullanilan TestNG notasyonudur.
+* Method’u test case olarak işaretler ve calistirir.
+* Ayrica bir Main Method’a ihtiyac duymaz.!!!!!
+
+
+@BeforeSuite @AfterSuite => runs before/ after all tests in this suite
+@BeforeTest @AfterTest => run before/after all the test methods after Test
+@BeforeGroups @AfterGroups =>run before/after any specific test group
+@BeforeClass @AfterClass =>run before/ after all the test methods in a test class
+@BeforeMethod @AfterMethod =>run before/ after each test method (SAME AS
+@Before method in the JUnit)
+
+NOT :
+Bu notasyonlar
+kullanilinca her method
+icin ayri ayri calismaz,
+soylendigi sekilde
+sadece bir kere calisir.
+
+NOT : Her methoddan once veya sonra calisir. (JUnit deki @Before method’u gibi)
