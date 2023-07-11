@@ -130,17 +130,24 @@ edin "Select One", "Australia (dollar)", "Canada (dollar)","Switzerland
         /** Tüm secenekleri almak icin getOptions kullandim ve list icine attim */
         List<WebElement> liste = select2.getOptions();
 
-
+        /** Expected yani beklenileni String icine attim karsilastirma yaparken kolay olmasi icin */
         String options = "\"Select One\", \"Australia (dollar)\", \"Canada (dollar)\",\"Switzerland\n" +
                 "(franc)\",\"China (yuan)\",\"Denmark (krone)\",\"Eurozone (euro)\",\"Great Britain\n" +
                 "(pound)\",\"Hong Kong (dollar)\",\"Japan (yen)\",\"Mexico (peso)\",\"Norway\n" +
                 "(krone)\",\"New Zealand (dollar)\",\"Sweden (krona)\",\"Singapore\n" +
                 "(dollar)\",\"Thailand (baht)\"";
 
-
+        /** Lambda ile tüm secenekleri konsola yazdirdim */
         liste.stream().forEach(t-> System.out.println(t.getText()));
 
+
+        /** En son da daha önce olusturdugum SoftAsset ile kontrolümü yaptim */
         softAssert.assertTrue(liste.contains(options));
+
+        /** AssertAll ile kontolün bittigini belirttim. Eger hata varsa bile devam eder ama kendisinden sonra bir kod
+           varsa o calismaz. Ancak bu durumda kednisinden sonra bir kod yaok ve hic bir FAIL DURUMUDA YOKTUR.
+         */
+        softAssert.assertAll();
 
 
 
