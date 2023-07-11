@@ -1,0 +1,115 @@
+
+
+
+Klasorler
+tests
+pages
+utilities
+Classlar
+Reusable Classes
+Dosyalar
+Configuration files
+Rapor files
+
+
+Baska bir Class’dan variable veya method kullanmak
+istersek 3 yontem kullanabiliriz
+A- inheritance (Miras)
+kullandigimiz Class’i extends anahtar kelimesi (key
+word) ile istedigimiz Class’in child’i yapabiliriz.
+extends
+Bu durumda object olusturmaya gerek kalmadan Parent
+class’a ulasabilir ve oradaki variable ve methodlari
+kullanabiliriz. (Test Base gibi)
+Inheritance ile variable ve method kullanirken
+static keyword’e dikkat etmek gerekir. Static
+olarak tanimlanmis bir variable veya method
+static olmayan method icinden kullanilamaz.
+
+
+
+B- Object olusturarak
+Bir class’dan obje olusturarak istedigimiz
+class’a ulasabilir ve o class’daki variable ve
+methodlari object’imizi araciligiyla kullanabiliriz
+ornek: Servis class’indan Okul class’ina ulasmak
+istiyorsak
+- Okul class’indan bir obje olustururuz
+- obje uzerinden variable veya
+method’lara ulasabiliriz
+C- Static Class Uyeleri : Eger kullanacagimiz variable
+veya method static ise object olusturmadan direk
+class ismi ile variable veya method’a ulasabiliriz
+
+
+
+
+
+Page Object Model
+Framework design
+➢ Bir sirkette test framework’u olusturdugumuzda
+kullanici adi, sifresi, gidilecek web adresi gibi test
+datalari tum testler icin gecerlidir. Ayrica surekli
+kullanmamiz gereken variable ve method’lar
+olacaktir.
+➢ Daha kullanisli bir Framework olusturmak icin
+temel hedefimiz, tekrar tekrar yaptigimiz islemleri
+ve testlerimizde kullandigimiz Test Data’larini
+onceden hazirladigimiz dosyalarda tutmaktir.
+➢ Bu sekilde testlerimizde ihtiyac duydugumuzda
+bu verilere kolayca ulasabilir veya test datalari
+ile ilgili bir degisiklik yapmamiz gerektiginde
+sadece kaynak dosyadan bir degeri degistirerek
+tum test case’leri guncellemis oluruz.
+
+
+
+
+
+Page Object Model
+Framework design
+➢ POM çok popüler bir Framework Design Pattern ‘dir.
+➢ Test suitlerimizde çok fazla testimiz olduğunda, test
+caseleri ve kodları korumak daha karmaşık hale gelir.
+Bu nedenle,
+Kolay bakim yapilabilir(maintainable),
+yeniden kullanılabilir(reusable),
+daha hızlı(faster),
+anlaşılabilir( understandable)
+daha iyi bir framework dizaynina ihtiyacımız vardir.
+➢ Page object model ile, sayfaya özgü elementleri veya methodlari page class icinde tutar, ve bunları
+gerçek test classlarından uzak tutarız.
+➢ POM ile ihtiyacimiz olan class uyelerini sadece bir kez create edip birçok kez kullanabiliriz.
+
+
+
+Page Object Model
+Framework design
+➢ Framework un verimliliğini artırmak için core Java ve
+Selenium konseptini kullanarak temel olarak page
+classları ve test classları oluşturacağız.
+➢ Bütün şirketler page object model dizaynini kullanmayabilir, ancak
+herkes bunu bilir ve daha da popüler hale gelmektedir.
+➢ Daha iyi bir tasarım, testin yürütme süresini daha hızlı
+hale getirir.
+➢ Bir uygulamanın(application) işlevselliği değiştiğinde,
+kodu düzeltmek için framework kontrol edilmesini ve
+gerekli duzeltmelerin yapilmasini kolaylastirir.
+➢ Page Object Design daha bağımsız test senaryoları oluşturmamıza yardımcı olur, böylece test
+komut dosyalarında(script) hata ayıklamak daha kolay olacaktır.
+
+
+
+
+Page Object
+Model
+Framework design
+Page Object Model temelde 3 package icerir
+➢ Tests : Sadece testleri execute etmek icin gerekli
+adimlari yazacagimiz class’lar icerir. Hicbir data
+girisi yapmayacagiz
+➢ Pages : Test yapacagimiz sayfalardaki Web
+Elementlerini locate etmek ve temel
+methodlari olusturmak icin kullanilir.
+➢ Utilities : Driver,TestBase ve ConfigurationReader
+class’larini icerir
