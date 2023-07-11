@@ -1,0 +1,53 @@
+
+
+SITE TANITIMI
+https://zoom.us/j/2485181353
+https://allovercommerce.com/
+bu sayfayi projede kullanacagiz, bu bir alisveris sitesi.bir tester icin siteyi cok iyi bilmek önemlidir. her noktasini bilmemiz gerek.sitenin tümünü incelememiz gerek, siteyi en iyi bilen biz olmaliyiz.
+iki secenek vardir, kullanici ve satici olarak giris.
+siteye sign in butonundan kayit olup giriyoruz.
+https://www.fakemail.net/
+1 saatligine size fake mail veren bir sitedir. burdan bir mail alarak kullanabiliriz. mail kutusu da vardir. herhangi bir parola kisitlamaci kullanici icin yok.satici icin var.mailler tek kullanimlik. 1 saat sonra yenisini almak gerek.
+giris yaptiktan sonra istedigimiz ürüne gidip ürünü sayica keyfi ekliyoruz.
+en altta wishlist var, daha sonra ürünü incelemek icin.
+myaccount kullaniciyla lgili tanimlanmis bölümler var...
+aliveris sayfasi, ödeme sayfasi, istek listesi,fatura adresi isim soyisim bölümleri, mecburi doldurulmasi gereken yerler, adres eklendiginde sadece ödeme kismi geliyor, ...
+ürün karsilastirma islemi-->terazi isareti
+istek listesi secenegi-->kalp isareti
+ikinci rol; satici olarak girmektir.
+registerdan satici olarak girer.
+bu bir test sitesidir.
+my account kisminda fazladan secenek var solda, eklenen ürünleri ve eklenen ürünlerin özelliklerini tek tek gösterir.
+magaza sahibi olundugu icin, my store kisminda productta yüklenen ürünler ve ürün yükleme var, ürün ekleme islemleri icin doldurulmasi gereken yerler var, submit ile ekleniyor, satici olarak da alinan siparisler görülebilir, kupon olusturulabilir--kod ve isim--indirim miktari, ...
+ilk tavsiye önce kullanici olun ve sayfayi ögrenin, daha sonra become a vendor kismi var, registration sayfasi aciliyor, buraya doldurarak satici olun.
+siteyi iyice karistirin ve iyi ögrenin.
+test case'leri biz hazırlaycağız okey, user story'leride mi biz hazırlayacağız?
+Bahadır Günüvar
+-------------------------
+test case'leri biz hazırlayacağız okey, user story'leri de mi biz hazırlayacağız?
+halihazirda yazilmis olanlar var ancak sadece kendimizi gelistirmek icin
+biz de story üretecegiz.
+------------------------------
+zeynepK
+-----------------------------------
+Allover Commerce
+Sag ust kosede; sign in/ register button -giris yap, uye ol
+Sign In icinde bir kullanici olarak ya da satici olarak giris yapabiliriz. Iki rol var. user ve vendor
+Fakemail.net sitesi bir saatligine bir mail sagliyor bize
+Oradan uretilen maili alip Allover Commerce Sign In icerisinde bu email addresini kullandik
+Kayit onayi sonrasi user olarak siteye girdik. Ardindan myaccount kismina gelip bilgileri girdik.
+Sitede bir urun incelemek icin search tool’da urun aratiyoruz. Urunleri tiklayarak ozelliklerini gorebiliyoruz.
+Add to Cart ile sepete urun ekliyoruz.
+Istek listesine urun eklersek kalp sekline tiklayinca listemizi goruyoruz.
+Terazi isareti ile urun karsilastirmasi yapabiliyoruz. Bir urunu karsilastirmada kullanmak icin terazi isaretine tikliyoruz. Sonra basak bir urun gorunce ve karsilastirma yapilsin diye istedigimizde tekrar terazi isaretine tikliyoruz.
+Billing Details kismi odeme icin gerekli bilgileri iceriyor. Bunu daha sonra dolduracagiz.
+Satin alma islemini test edecegiz.
+Biz daha sonra adres tanimlamalarini yapacagiz. Odeme adres tanimlama ile mumkun olacak
+Birinci rolumuzde user olduk. Buradaki menuler user icin olan menuler
+Ikinci rolumuzde bir urun saticisi olabiliriz. Sayfaya satici olarak girebilmek icin Sign In’e girecegiz.
+Satici icin farkli menuler var.
+Products bolumune giriyoruz. MyStore’da product Add new’e tiklariz. Urun bilgilerini fiyatini gireriz
+Simple product devaminda ismi, ucreti girecegiz. Isim olarak logo’yu girdik.  Submit’e tiklayinca yeni urun ekleriz.
+Products’a tekrar tiklayinca ekledigimiz urun gelmis mi gorebiliriz. Orders’da siparisleri aliyoruz.
+Coupons ise urunlerde indirim yapmak istersek bunun icin kullaniyoruz. Indirim miktari ve suresini giriyoruz. Code, Type, Amount, Usage Limit, Expiry Date basliklari altini doldurup kupon olusturuyoruz. Bu sekilde kuponlar olusturuyoruz.
+Vendor Registration bu sitede satici olarak kayit yapmak ile ilgili.

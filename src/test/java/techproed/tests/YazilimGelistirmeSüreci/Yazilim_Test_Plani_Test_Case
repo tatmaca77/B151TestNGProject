@@ -1,0 +1,114 @@
+
+
+ /*
+        Ne zaman teste baslarsin?
+
+        Development bitmeden requirement'i anlamakla baslar. Uygulamanin daha duzgun calismasi icin user storyleri de incelemekle baslar
+
+        Test ne zaman biter?
+
+        Test caseleri tamamlayip bug'lari fix'ledikten sonra basarili sonlabilir veya development sonlanmis ama cok fazla bug oldugu icin testler developer a gonderilir.
+        Bir oran verilirse %98 hatasiz testle tamamlanabilir. Bazen yuzde verilmez tum case'ler basarili olarak kosularak tamamlanir.
+
+         */
+
+        /*
+        Hatalara derece verilebilir. Bunlara onem derecesine gore islem yapilabilir. minor,medium vs..
+        JIRA,ALM gibi proje yonetim araclarindan hangisi kullaniliyorsa bulunan hatalar icin burda kayit acilir
+        1-Derece Hatalar ==> Sistemin calismani direkt etkiler
+        2-Derece Hatalar ==> Sistemin calismani direkt etkilemez fama islevsel olarak bazi kisimlarin calismani engeller
+        3-Derece Hatalar ==> Sistemin calismasinda bir problem yok ama kozmetik hatalar, gorsel hatalar gibi..
+         */
+
+
+           /*
+                 Risk Yonetimi
+                 Olusabilecek tum riskler (isten ayrilma, butcenin tukenmesi vs.gibi ) Proje Risk Veri Tabani ile kayit altina alinmalidir.
+                 Test faaliyetinin ilerlemesini engelleyebilecek riskler;
+
+                 *Gereksinimlerin cikarilmasinin gecikmesi test adimlarini veya test senaryolarinin yazilmasini geciktirebilir
+                 *Test ekibinin farkli projelerde gorev yapmasi test faaliyetlerini aksatabilir
+                 *Proje modullerinin zamaninda tamamlanmamasi..
+
+                  */
+                 /*
+                 Gorev ve Sorumluluklar
+                 Birim Testleri  ===> Dev Ekibi
+                 Entegrasyon Testleri ===> Dev +QA
+                 Sistem Testleri ===> QA
+                 User Acceptance Testleri ==> Kullanici +QA
+                  */
+
+
+
+                    /*
+                          Test Ortami ve Test Araclari
+                          Kullanilacak test araclari ve kullanilacak test ortami (bilgisayar ve surumu vs)
+                           */
+                          /*
+                          Test Takvimi
+                          Proje suresini canliya cikis tarihine gore detaylandirilarak bir takvim olusturulmasi. Buna gore testlerin baslangic ve bitis tarihleri bu takvimde belirlenbilir
+                           */
+
+
+                             TEST CASE
+
+                                   /*
+                                   Test Coverage --> Test Kapsami
+                                   Her sart icin en az 2 uzeri sart kadar test yazilmali ama boyle olmak zorunda degil
+                                   --Her zaman negatif test yazmak zorunda degiliz
+                                   --Manuel tester lar otomasyona uygun case yazmaya calisir
+                                   Test Case in kapsami mumkun oldugu kadar genis olmali
+                                    */
+
+
+                                    Testing yaparken her zaman uctan uca Test EndTo End olmalidir.
+                                     //--Otomasyon test yapmak icin uctan uca test olmali Ilk adim login son adim dogrulama olmali
+
+                                     /*
+                                             Login duzenli bir sekilde calisiyorsa login icin yine her seferinde detayli case yazmaya gerek yok
+                                              */
+
+
+                                              /*
+                                              Otomasyon Tester development i bitmis bir sitede test yapar.
+                                              Test caseler mutlaka ingilizce yazilmali
+                                               */
+
+
+
+                                               /*
+                                                       Pre-Condition testin calismasi icin yapilmasi gereken on sart
+                                                       Test Case de steplerde kisa oz anlasilir maddeler yazilmali
+                                                        */
+
+
+                                                      Test Case yazarken yazdigim olumlu olumsuz senaryolar gibidir.
+                                                        happy path and unhappy path testing
+
+
+                                                        /*
+                                                                Test Case yazarken olusabilecek tum durumlari kapsayabilecek caseler yazmaliyiz
+                                                                 */
+
+                  Test Case’i hazirlarken:
+                  Pre-Condition: testimizi yapmadan once gerekli bir on sart varsa test case icersinde bu bolume ilgili bilgi girilir.
+                  Steps: Ornegin, kullanici anasayfaya gider gecerli bir sekilde giris yapar(happy path senaryo)
+                  Kullanici anasayfaya gider ve gecersiz bir giris yapmaya calisir ve giris yapamaz(unhappy path senaryo-unhappy path testing)
+
+
+
+                  Biz test caselerimizi hazirladiktan sonra BA ile iletisime geceriz ve deginmemiz gereken her yere dokunmus muyuz,
+                  test caselerimiz kapsayici olmus mu diye bir bakmasini BA’den isteyebiliriz.
+
+                  --> Development yapilirken bizim TestCase yazmamiz gerekiyor. !!!!!
+
+
+
+                  /*
+                          Zorunlu alanlarin doldurulmasi gerektigi durumlarda eger her alan icin ayri mesaj geliyorsa o kisimla ilgili
+                          case yazmaliyiz ama tek bir mesaj geliyorsa her bir bolumu bos birakip o bolum icin ayri bir case yazilabilir
+                           */
+
+
+                  //Expected Result tek tek satirlara da girilebilir son kisimda tek bir satirda da yazilabilir

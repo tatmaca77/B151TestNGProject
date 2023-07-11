@@ -1,0 +1,78 @@
+
+
+
+Stakeholder;musteri
+Backlog;scrum projesinde yer alan ve yapılacak islerin listesidir,
+functional requirement document=user story. (Frd)
+Shift left testing: Yazilim gelistirilip test edilme asamasina gelmeden once tester’lari devreye sokmak anlamindadir.
+team'in calismasini engelleyecek durumlari duzeltmeye, cozum uretmeye calisan kisi Scrum Master
+Dev environment: Bu ortam developerlarin kullandigi ortamdir. Developerlar kendi unit testlerini tamamladiktan sonra application qa environment’a aktarilir.
+2-QA environment: Bu ortam testerlarin testlerini yuruttugu ortamdir. Hata ile karsilasildiginda developera bilgi verilir. Developer duzeltmesini dev envoronmetta yaptiktan sonra ilgili fonksiyon tekrar qa environmet’a aktarilir.
+3-Stage(Pre-prod) environment: testerlar testlerini tamamlayip application buglarindan arindirildiginda application bu oratama aktarilir. Bu ortam canli ortamin bir kopyasidir. UAT(User Acceptance Testing) Testleri bu ortamda yapilir.
+4-Prod environment: UAT’den basari ile gecen applicationin aktarildigi ortamdir. Son kullanicinin kullandigi ortamdir.
+       /*Yazilim Gelistirme Sureci
+        1-Dev Environment   --Gelistirme Sureci
+        2-QA Environment    --Test Etme Sureci
+        3-Pre Prod Environment --Dev yazdi Qa test etti kullaniciyla bulusmadan once uygulamayi bilen veya kullanicilarin yaptigi test(User Acceptance Testing)
+        4-Deployment->Prod --Kullanici feedbackleri alinarak, uygulamada bakim ve updateler yapilabilir
+        Surec 2 ana nedenle olusur
+        ==> Proje fikri     veya   ===>Ihtiyaca binaen
+        ==> Bu proje icin kaynak (sponsor) bulmak gerekir. Steakholder
+        ==>Sayfa dizaynlarinin yapilmasi
+        ==>Product Backlog'un hazirlanmasi
+        Or: Bir ihtiyac dogrultusunda proje olusturmak icin butce planlamasi yapildiktan sonra projenin bizden bekledigi seye gore yontem belirleriz.
+        Yonteme gore proje yapilmaz.
+        Musteriden gelen gereksinimleri backlog larda tutariz. Agile veya kanbanda calisiyorsak product backlog item'lari hazirlanabilir.
+        Waterfall da tumu hazir olmali
+        */
+        /*
+        Planlama(Ortaklar) - Analiz(BA) - Tasarim (System artitech - UI UX Designer)
+        shift left testing-Solo Kaydirma Testi ==>Tester'i daha onceki asamalarda devreye sokmak
+        business reguirement document(brd) --business taraf ile sirket arasindaki uzlasma
+        frd(functional requirement document)dev ve tester'larin yapmasi gereken kurallari iceren teknik dokuman
+        Bazi projelerde user story de denir. Ama daha teknik sirketlerde frd denir (PBI=Product Backlog Item.)
+         */
+   /*
+        Dev Environment --> Fiziksel degil sanal bir ortam -Ayni ortam icinde ayrilmis bir bolum - Developer isini tamamlayip tester'a gonderir ordan da pre prod ve canliya cikma sureci
+        Pre Prod her zaman her projede olmayabilir.
+        Ama dev environment-qa environment , deployment olmak zorundadir.
+         */
+        /*
+        Scrum master: hizmetkar lider
+        Sprint toplantilarini hazirlar, grooming toplantisi gerektiginde ayarlar, veri tabani ile ilgili problem oldugunda yol gosterir,
+        takımın taahhüt edilen görevleri yerine getirme konusunda engel yasayanlara yardimci olur
+         */
+ /*
+        Product Owner business ile gelistirme takimi arasinda koprudur. Cok onemli durumlar haricinde pek karismaz.
+        Projede illa BA olacak diye birsey yok user story'leri yazma isini yapacak biri de olabilir
+         */
+ /*
+        Dev kodunu yazarken tester bos durmaz. Test case tasarimini yapar. User Story'e gore test case yazar. Test data'larimizi da bu surecte hazırlarız.
+        Expected Result ile Actual Result birbirine esit mi bunu kontrol eder.
+         */
+// Bir gelistirmenin otomasyona dokulebilmesi icin orda yapilan tum hatalarin temizlenmis ve stabil olmasi gerekir.
+INTERVIEW SORUSU
+Neden testleri otomasyona dokuyoruz?
+Zamanadan ve dolayısı ile maliyetten tasarruf sağlanır ayrıca
+ otomasyonda daha az hata alınır. Ilk once genelde manual test yapılır çıkan hata varsa raporlanir ve developer bu hatayı düzeltir sonra hatalardan tamamen arindirilmis oldugunu dusundugumzde otomasyon yapılır.
+   /*
+        Test Case yazarken test tekniklerine uygun test case yazmaliyiz
+        Teknik aynidir ama test datasi degisir.
+        Sinir deger analizi, denklik paylarina ayirma, karar tablosu, durum gecis senaryosu test teknigi (belli bir sarta gore durumlarin degistigi)
+        Bu test tekniklerini iyice sindirip testleri yazmaliyiz
+        Test Tekniklerini minumum test senaryosu ile maksimum alani test etmek icin kullaniriz.Onemli olan hata sayisini en aza indirmektir.
+         */
+Test Case’lerimizi Nasil Yazariz?
+Balck Box Test Teknikleri ile calisiriz.
+Hangi test teknigini uygulayacagimiza karar veririz.
+Boundary value analysis yas girilecek durumlarda kullanilabilir ya da kilo ile ilgili gruplandirma yapabiliriz. Ornegin 30-50 kilo arasi, 50-70 kilo arasi ve sonrasi
+Bazen belirli sartlara riayet etmek gerekebilir. Ona uygun test teknigini uygulariz. Her zaman tek bir Teknik kullanmayabiliriz. Birden fazla test teknigini kullanabiliriz. Minimum test ile maksimum sonuc almaya calisma amaci ile hareket ederiz. Ilgili fonksiyon calisiyor mu, buna bakarken hata almayi minimum seviyeye indirmeye calisiriz.
+Test Cesitleri:
+Smoke Test: Bir uygulamanin calisip calismadigi, herhangi bir yerine ulasma problem olup olmadigini test ederiz. Uygulamanin en  cok kullanilan, hata olursa sorun olacak nitelikteki fonksiyonlarini test eder.
+Integration Test: Bir puzzle parcalarini dusunelim. Her bir parcanin farkli sistemlerle etkilesimi soz konusu olur. Birbirinden farkli iki uygulamadan birindeki degisiklik digerini de etkiliyorsa ikisi arasinda bir etkilesim olabilir. Parcalarin birbirleri ile etkilesimleri ve etkileri ile ilgilidir.
+Regression Test: Bir yerde degisiklik yapildiktan sonra bu degisikligin uygulamanin bir bolumu ya da birden fazla bolumunu etkileyip etkilemedigi, diger bolumlerin calismasini olumsuz etkileyip etkilemedigini kontrol eder.
+ E2E Test: UI’da bir fonksiyon calistiysa onun API’da ve baskaca ortamlarda da calisip calismadigini test etmemizdir. Siteye giristen itibaren tum adimlari test etmemizdir. Bir uctan diger uca kadar testler yapmamizdir.
+        /*
+        Bir uygulamada birbirinden etkilenen bolumlerin test edilmesi -minor regresyon
+        Uygulamanin tamaminin test edilmesi -major regresyon
+         */
