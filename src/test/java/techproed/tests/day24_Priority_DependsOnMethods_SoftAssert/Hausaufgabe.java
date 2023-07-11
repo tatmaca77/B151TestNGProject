@@ -8,10 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
@@ -39,6 +36,11 @@ edin "Select One", "Australia (dollar)", "Canada (dollar)","Switzerland
 (dollar)","Thailand (baht)"
      */
 
+    @BeforeMethod
+    public void setUp() {
+        System.out.println("Test01 baslatildi.");
+    }
+
     WebDriver driver;
     @BeforeClass
     public void beforeClass() {
@@ -49,13 +51,15 @@ edin "Select One", "Australia (dollar)", "Canada (dollar)","Switzerland
     }
 
     @Test
-    public void test01() {
+    public void test01() throws InterruptedException {
         // 1. “http://zero.webappsecurity.com/” Adresine gidin
         driver.get("http://zero.webappsecurity.com/");
 
 
         // 2. Sign in butonuna basin
         driver.findElement(By.xpath("//button[@id='signin_button']")).click();
+
+        Thread.sleep(2000);
 
 
         /**                   1.YOL
@@ -87,23 +91,32 @@ edin "Select One", "Australia (dollar)", "Canada (dollar)","Switzerland
                 sendKeys(Keys.ENTER).
                 perform();
 
+        Thread.sleep(2000);
+
         // Syfa kendine gelsin diye back yaptim.
         driver.navigate().back();
+
+        Thread.sleep(2000);
 
 
         // 6. Online banking menusu icinde Pay Bills sayfasina gidin
         driver.findElement(By.xpath("//li[@id='onlineBankingMenu']")).click();
+
+        Thread.sleep(2000);
 
         WebElement payBills = driver.findElement(By.xpath("//span[@id='pay_bills_link']"));
 
         action.scrollToElement(payBills);
         payBills.click();
 
+        Thread.sleep(2000);
+
 
 
         // 7. “Purchase Foreign Currency” tusuna basin
         driver.findElement(By.xpath("(//li[@class='ui-state-default ui-corner-top'])[2]")).click();
 
+        Thread.sleep(2000);
 
 
         // 8. “Currency” drop down menusunden Eurozone’u secin
@@ -112,6 +125,9 @@ edin "Select One", "Australia (dollar)", "Canada (dollar)","Switzerland
         Select select = new Select(ddm);
 
         select.selectByVisibleText("Eurozone (euro)");
+
+
+        Thread.sleep(2000);
 
 
 
@@ -143,14 +159,23 @@ edin "Select One", "Australia (dollar)", "Canada (dollar)","Switzerland
         liste.stream().forEach(t-> System.out.println(t.getText()));
 
 
-        /** En son da daha önce olusturdugum SoftAsset ile kontrolümü yaptim */
+        /** En son da daha önce olusturdugum SoftAssert ile kontrolümü yaptim */
         softAssert.assertTrue(liste.contains(options));
 
         /** AssertAll ile kontolün bittigini belirttim. Eger hata varsa bile devam eder ama kendisinden sonra bir kod
            varsa o calismaz. Ancak bu durumda kednisinden sonra bir kod yaok ve hic bir FAIL DURUMUDA YOKTUR.
          */
-        softAssert.assertAll();
 
+    }
+
+    @Test @Ignore
+    public void test02() {
+        System.out.println("Bu method gecici olarak calismayacaktir.");
+    }
+
+    @Test (enabled = false)
+    public void testName() {
+        System.out.println("Bu method hic bir zaman calismayacaktir. Ve raporlamada olmayacaktir.");
     }
 
     @AfterMethod
