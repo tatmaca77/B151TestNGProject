@@ -1,0 +1,20 @@
+
+
+
+                  ---- DependsOnMethods ----
+
+➢ Bu yontem, bir metodun diğer bir metoda
+bağlı olmasını sağlamak için kullanılır.
+
+➢ Yandaki ornekte, homePage metdod’u searchTest
+method’una bağlıdır. Yani, homePage başarılı
+olursa searchTest de çalisacaktir.
+
+➢ Diger durumda yani, homePage başarısız olursa
+searchTest ignore edilecek, hic çalismayacaktir.
+
+➢ Yalnızca searchTest method’unu çalıştırırsak bile, TestNG önce homePage metodunu
+çalıştırır. homePage başarılı olursa searchTest calistirilir
+
+➢ Ustteki madde sadece 2 method icin gecerlidir. 3 method’u birbirine baglayip 3.method’u
+calistirirsaniz, 1.method’a kadar gitmez.

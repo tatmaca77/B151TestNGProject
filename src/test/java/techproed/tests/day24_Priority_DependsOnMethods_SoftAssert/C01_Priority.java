@@ -11,13 +11,14 @@ import java.time.Duration;
 
 public class C01_Priority {
 
-    /**
-       Junitte test methodlarını istediğimiz şekilde sıralamak için method isimlerini alfabetik ve numerik sıralı
-  olarak yazmamız gerekiyordu. TestNG frameworkunde bu sıralama için @Test notasyonundan sonra parametre olarak
+    /**   Priority == Siralama
+       Junitte --> test methodlarını istediğimiz şekilde sıralamak için method isimlerini alfabetik ve numerik sıralı
+  olarak yazmamız gerekiyordu.
+       TestNG --> frameworkunde bu sıralama için @Test notasyonundan sonra parametre olarak
   (priority = 1 ) gibi öncelik sırası belirterek test methodlarımızı sıralayabiliriz.
   Priority kullanmadığımız methodda priority değerini 0(sıfır) olarak kabul eder.
     */
-    WebDriver driver;
+    WebDriver driver;   // Webriver driver objesini Class seviyesinde yapiyoruz ki diger methodlarda da kullanalim !!!!
     @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
@@ -31,7 +32,7 @@ public class C01_Priority {
         driver.get("https://amazon.com");//-->ikinci olarak amazon çalışsın
     }
     @Test
-    public void youtubeTest() {
+    public void youtubeTest() {    /** Priority numarasi vermedik; bu yüzden Default olarak 0 olur en önce calisir. */
         driver.get("https://youtube.com");//-->youtube önce çalışsın--> Default 0 olduğu için önce bu method çalışır
     }
     @Test(priority = 2)

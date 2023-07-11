@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -16,13 +17,13 @@ public class C04_DependsOnMethods {
     WebDriver driver;
     @AfterMethod
     public void tearDown() {
-        //driver.close();
+        //driver.close();   //Burda her test methodlarindan sonra AfterMethod calisacagi icin driver.close yaparsak ilerlemez.
     }
 
     @BeforeClass
-    public void setUp() {
+    public void setUp() {   // Class basinda 1 kez calisir.Sonra test01 calistirdi sonra bagli oldugu test methdolari calistirdi.
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver();     // BeforeMethod calistiraydik hataya düserdik. Her methodtan önce 1 kez calisirdi.
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
@@ -48,6 +49,11 @@ public class C04_DependsOnMethods {
     @Test(dependsOnMethods = "test04")
     public void test05() {
         System.out.println("test05");
+    }
+
+    @Test(priority = 5)
+    public void test06() {
+        System.out.println("test06");
     }
 
 }

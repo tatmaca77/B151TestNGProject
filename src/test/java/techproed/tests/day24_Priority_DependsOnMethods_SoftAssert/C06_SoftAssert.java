@@ -15,9 +15,9 @@ import java.time.Duration;
 public class C06_SoftAssert {
 
     /**
-       SoftAssert kullanımında junitteki daha önce kullanıdığımız methodların aynısını kullanırız.
+       SoftAssert --> kullanımında "junitteki" daha önce kullanıdığımız methodların aynısını kullanırız.
    Daha önceden kullandığımız assertion nerde hata alırsa orda testlerin çalışmasını durdurur.
-   SoftAssert'te ne kadar assertion kullansakta nerde assertAll() methodu kullanırsak testlerimiz de
+   SoftAssert'te ne kadar assertion kullansakta nerde ( assertAll() ) methodu kullanırsak testlerimiz de
    kullandığımız assertionlar orda sonlanır ve hata varsa bunu bize konsolda belirtir
     */
 
@@ -48,7 +48,7 @@ public class C06_SoftAssert {
         //Sonucun samsung içerip içermediğini test edin
         WebElement sonucYazisi = driver.findElement(By.xpath("(//*[@class='sg-col-inner'])[1]"));
         softAssert.assertTrue(sonucYazisi.getText().contains("samsung"));//-->Bilerek hata alıcaz
-        softAssert.assertAll();
+        softAssert.assertAll();  // Burdan sonra yapilan islemler calismaz !!!!! SOUT calismaz
         System.out.println("Burası çalışmaz");
     }
 
@@ -71,7 +71,7 @@ public class C06_SoftAssert {
         WebElement sonucYazisi = driver.findElement(By.xpath("(//*[@class='sg-col-inner'])[1]"));
         softAssert.assertTrue(sonucYazisi.getText().contains("samsung"));//-->Bilerek hata alıcaz
         System.out.println("Burası çalıştı");
-        softAssert.assertAll();
+        softAssert.assertAll();  // softAssert.assertAll sout altinda oldugu icin sout calisir.
     }
 
     @Test
@@ -94,6 +94,11 @@ public class C06_SoftAssert {
         softAssert.assertFalse(sonucYazisi.getText().contains("samsung"));
         softAssert.assertAll();
         System.out.println("Burası çalıştı");
+
+        /**
+        test03 methodunda herhangi bir FAIL durumu hata alma durumu olmadigi icin bütün kodlar saglikli bir sekilde
+        calisir. SOUT assertAll altinda olsa bile calisti. Üstünde olsaydi da calisirdi. FAIL durumu yok !!!!!!
+         */
 
     }
 

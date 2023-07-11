@@ -1,0 +1,20 @@
+
+                                --- Priority  ==>  Siralama
+
+➢ TestNG (default) olarak @Test
+methodlarıni alfabetik sıraya göre
+run eder. (Yukardan asagi degil!)
+
+➢ priority annotation Testlere öncelik
+vermek için kullanılır. Kucuk olan
+Numara daha once calisir
+
+➢ priority yazmayan Test method’u
+varsa priority= 0 kabul edilir,
+siralama buna gore yapilir
+
+
+* Eger Priority ile Test methodlarinin siralamasini belirlemezsek -> Priority degeri 0 olarak görünür. Ve Ayrica
+  method isimlerinin harflerinin önceligine göre alfabetik olarak siralama yapar ve methodlari calistirir.
+
+

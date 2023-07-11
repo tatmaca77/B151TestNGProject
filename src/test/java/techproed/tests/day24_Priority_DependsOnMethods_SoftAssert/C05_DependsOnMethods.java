@@ -20,4 +20,10 @@ public class C05_DependsOnMethods {
     public void test04() {
         System.out.println("aysem");
     }
+
+    /**
+    Burda Class seviyesinde calistirmamiz gerekecektir. O sekilde bütün test methodlari calismis olacaktir. Sadece
+    test seviyesinde calistirisak calistirdigimiz test ve bagli oldugu test methodölari calisir.
+    Ancak bu örnekteki gibi test04 methodunun baglilik iliskisi olmadigi icin o calismaz ve hata verir.
+     */
 }

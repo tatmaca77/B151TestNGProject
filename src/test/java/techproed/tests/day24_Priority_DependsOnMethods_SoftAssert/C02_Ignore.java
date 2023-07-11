@@ -29,11 +29,11 @@ public class C02_Ignore {
     kullanabilirsiniz.
      */
 
-    @Test @Ignore
+    @Test @Ignore          /** Ignore yaptigimizda method atlatir calismaz ama Raporlamada method görünür. !!! */
     public void amazonTest() {
         driver.get("https://amazon.com");
     }
-    @Test(enabled = false)
+    @Test(enabled = false)   /** enabled=false yapildiginda ise method tamamen iptal eder ve raporda görünmez. Yanlis yazdim der */
     public void youtubeTest() {
         driver.get("https://youtube.com");
     }
