@@ -1,0 +1,37 @@
+
+
+reproduce= tekrarlama
+bug tekrar tespit edilemiyorsa bug buldum denmemeli
+bug bulundugunda ilk önce dev ile görüsülmeli. fixlenebiliyorsa ypilmali bug acilmamali
+Mrt Nzl
+-----------------
+Scrum Master veya TeamLead...Board'e Yöneten.
+--------------------------------
+duplicate bizden önceki baska kisi bu bug acilmistir, boarda almaya gerek yoktur
+!!! TESTER OLARAK BUG BULDUĞUMUZDA NE YAPMALIYIZ !!!
+Bir bug bulduğumuzda öncelikle bunun bug olduğundan emin olmamız
+gerekiyor.
+Bunun için testimizi tekrarlamalı, gerekirse başka tester var ise onun
+fikrini almamızda fayda var. Test Leade bilgi verilebilir.
+Eğer developerlar ile aynı ortamda çalışılıyorsa, developer durumdan haberdar edilebilir. Developer bunun bug olmadığını, bug olduğunu ya da
+önemsiz bir durum olduğunu ifade edebilir.
+Developerin dönüşüne göre hareket edilir.
+Bug Raporu (Bug Report)
+Hata raporlama işlemi proje yönetim aracı üzerinde gerçekleştirilebilirken, aşağıdaki başlıklardan oluşan bir dokumanda oluşturulabilir. Bu dokuman sayesinde geliştirici hatayı daha rahat anlayabilir.
+Başlık (Title): Hata başlığı diğer hatalarda ayırt etmek için yazılır. Hata başlığı kısa ve öz olmalıdır. Örnek vermek gerekirse "Kullanıcı tanımlama ekranında kaydet butonuna basıldığında hata veriyor."
+Atama (Assigned To) : Bulunan hatanın hangi geliştiriciye veya takım liderine atanacağı bu alandan seçilmelidir.
+Öncelik (Priority): Yazılım Test Planın'da hatalar önceliklerine göre derecelendirilmelidir. Bulunan hataların öncelik değerleri plana göre doğru şekilde girilmelidir.
+Önem Derecesi (Severity) : Bulunan hatalar önem derecesine göre gruplandırılmalıdır. İlgili geliştirici hataları önem derecesine göre çözmelidir.
+Hata Kaynağı (Root Cause) : Bulunan hatanın kaynağı belirtilmelidir. Bu bilgi test faaliyetleri sonucunda ölçüm ve analiz için kullanılabilir.
+Bug Raporu (Bug Report)
+Adımlar (Repro Steps): Bulunan hatanın ilgili geliştirici tarafından tekrar simüle edilebilmesi için hatanın adım adım yazılması gerekmektedir. Bunun için aşağıdaki örneği verebiliriz:
+a. Kullanıcı tanımlama sayfasına gidilir.
+b. Ekranda yer alan tüm zorunlu alanlar doldurulur.
+c. Kaydet komutu verilir.
+Beklenen Sonuç: Kullanıcı tanımlama işleminin başarıyla tamamlandığına dair bilgilendirme mesajı verilmesi gerekir.
+Gerçekleşen Sonuç: NullPointerException hata mesaji alındı.
+Ekler (Attachments): Bulunan hatanın ekran görüntüsünü veya video kaydını alarak bu alana yüklenmesi test ekibinin hatayı geliştirme ekibine daha kolay aktarabilmesini sağlayacaktır.
+Kübra DENİZ
+---------------------------
+us eksikliginden kaynaklı bug bulunamayabilir
+----------------------------
