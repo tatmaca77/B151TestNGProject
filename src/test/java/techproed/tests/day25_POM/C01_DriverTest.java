@@ -11,7 +11,7 @@ public class C01_DriverTest {        // Önceden extends TestBase yapardik ve as
         Driver.getDriver().get("https://facebook.com");
         Driver.quitDriver();
 
-        /**
+        /**                   test01 ' de
         Bu methodda driver'ı if bloğu içine almadığımızdan dolayı
         her sayfa için yeni bir driver açtığının örneğini gösterdik
          */

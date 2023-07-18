@@ -24,7 +24,7 @@ public class Driver {
          */
     }
 
-    public static WebDriver getDriver() {
+    public static WebDriver getDriver() {  /** Methodlari static yapariz diger Class'larda sadece method ismi ile cagirmak icin. */
         if (driver == null){
             /**
                 Driver'i her çağırdığımızda yeni bir pencere açılmasının önüne geçmek için
