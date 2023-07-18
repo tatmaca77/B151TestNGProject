@@ -8,7 +8,7 @@ import java.time.Duration;
 /**
                              POM(Page Object Model)
     Test senaryolarının daha az kod ile yazılmasına ve bakımının daha kolay yapılmasına
-olanak sağlayan yazılım test yöntemidir. "TestNG" de ve "CUCUMBER" da "POM" kalıbını kullanırız.
+    olanak sağlayan yazılım test yöntemidir. "TestNG" de ve "CUCUMBER" da "POM" kalıbını kullanırız.
  */
 
 /**  SingletonPattern = Tekli Kullanım  */
