@@ -15,15 +15,17 @@ import java.time.Duration;
 
 public class Driver {
 
-    static WebDriver driver;
     private Driver(){
-        /**
+        /**             SingletonPattern = Tekli Kullanım
         Driver class'ından obje oluşturmanın önüne geçmek için
       default constructor'ı private yaparak bunun önüne geçebiliriz.
       Bu uygulamaya "singleton patter" denir.
+
+         Object olusturmak istemiyoruz cünkü karisikliga sebebiyet vermemk icin.
          */
     }
 
+    static WebDriver driver;
     public static WebDriver getDriver() {  /** Methodlari static yapariz diger Class'larda sadece method ismi ile cagirmak icin. */
         /**
          Driver'i her çağırdığımızda yeni bir pencere açılmasının önüne geçmek için

@@ -43,7 +43,7 @@ public class C01_DriverTest {        // Önceden extends TestBase yapardik ve as
         //driver.getDriver().get("https://amazon.com");
         /**
         Bu örnekte Driver class'ında singeleton pattern kullanarak obje oluşturmanın önüne
-        geçmiş olduk
+        geçmiş olduk  !!!!
          */
     }
 
