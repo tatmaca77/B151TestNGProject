@@ -25,12 +25,12 @@ public class Driver {
     }
 
     public static WebDriver getDriver() {  /** Methodlari static yapariz diger Class'larda sadece method ismi ile cagirmak icin. */
-        if (driver == null){
-            /**
-                Driver'i her çağırdığımızda yeni bir pencere açılmasının önüne geçmek için
-            if bloğu içinde Eğer driver'a değer atanmamışsa değer ata, eğer değer atanmışsa
-            Driver'i aynı sayfada return et.
-             */
+        /**
+         Driver'i her çağırdığımızda yeni bir pencere açılmasının önüne geçmek için
+         if bloğu içinde Eğer driver'a değer atanmamışsa değer ata, eğer değer atanmışsa
+         Driver'i aynı sayfada return et.
+         */
+        if (driver == null){ // --> Driver'a deger atanmamissa
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
@@ -40,7 +40,7 @@ public class Driver {
         return driver;
     }
     public static void closeDriver(){
-        if (driver != null){ //-->driver'a değer ATANMIŞSA
+        if (driver != null){ //-->driver'a değer ATANMIŞSA, yani bos degilse
             driver.close();
             driver = null; //-->driver'ı kapattıktan sonra boşalt
         }
