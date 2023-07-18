@@ -38,5 +38,14 @@ public class C03_PropertiesKullanimi {
         Driver.closeDriver();
 
 
+        //facebook sayfasina gidelim
+        Driver.getDriver().get("https://www.facebook.com"); // Bu sekilde de olur. Illa ConfigReader'dan almaya gerek yok.
+
+        // Eger ben 1 kere bu Url'e gideceksem bu sekilde gitmek mantiklidir. ConfigReader'da olma zorunlulugu yoktur.
+
+        // Sayfayi kapatalim
+        Driver.closeDriver();
+
+
     }
 }
