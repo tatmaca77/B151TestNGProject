@@ -9,7 +9,7 @@ public class C02_PropertiesKullanimi {
     public void test01() {
         String amazonUrl = ConfigReader.getProperty("amazonUrl");
         String username = ConfigReader.getProperty("username");
-        String password = ConfigReader.getProperty("password");
+        String password = ConfigReader.getProperty("password");    // En ufak bir harf yanlisinda null verir. Copy Paste yap.
         System.out.println(amazonUrl);
         System.out.println(username);
         System.out.println(password);

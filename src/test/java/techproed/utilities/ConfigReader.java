@@ -15,8 +15,7 @@ public class ConfigReader {
      */
 
     static Properties properties;
-
-    public static String getProperty (String key) {
+    static {
         try {
             FileInputStream fis = new FileInputStream("configuration.properties");
             properties = new Properties();
@@ -24,6 +23,10 @@ public class ConfigReader {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String getProperty (String key) {
+
         return properties.getProperty(key); // --> String olarak girdigim key'in degerini return eder.
     }
 }
