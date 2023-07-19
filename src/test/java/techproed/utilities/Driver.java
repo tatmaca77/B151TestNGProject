@@ -3,6 +3,9 @@ package techproed.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 /**
@@ -32,7 +35,35 @@ public class Driver {
          if bloğu içinde Eğer driver'a değer atanmamışsa değer ata, eğer değer atanmışsa
          Driver'i aynı sayfada return et.
          */
+
+
+        /**
+        .properties dosyasina key degeri olarak browser ve degerini asagida olusturdugumuz switch-case ' lerden birsini
+        seceriz ve sectigimiz driver calisir.
+         */
+
         if (driver == null){ // --> Driver'a deger atanmamissa
+            switch (ConfigReader.getProperty("browser")){
+                case "chrome":                                        // Key degeri eger chrome ise burayi calistir.
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case "edge":                                         // Browser'i belirledik. !!!!!!
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                    break;
+                case "safari":
+                    WebDriverManager.safaridriver().setup();      // Testlerin baska browser'larda ne sonuc veriyor test etmek gerekebilir.
+                    driver = new SafariDriver();
+                    break;
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();      // Testlerin baska browser'larda ne sonuc veriyor test etmek gerekebilir.
+                    driver = new FirefoxDriver();
+                    break;
+                default:
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+            }
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
