@@ -30,7 +30,7 @@ public class C01_NegativeTest {
         blueRentalPage.email.sendKeys(ConfigReader.getProperty("fake_email"), Keys.TAB,
                 ConfigReader.getProperty("fake_password"),Keys.TAB,Keys.ENTER);
        ReusableMethods.visibleWait(blueRentalPage.messageVerify,5);
-        Assert.assertTrue(blueRentalPage.messageVerify.isDisplayed());
+        Assert.assertTrue(blueRentalPage.loginVerify.isDisplayed());
 
         Driver.closeDriver();
 
