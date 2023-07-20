@@ -45,14 +45,20 @@ sendKeys() methodu ile çok rahat kullanabiliriz.
 
 
         // mysmoketestdata excel dosyasindan bir kullanici ile login olalim
-        BlueRentalPage rentalPage = new BlueRentalPage();
+        BlueRentalPage rentalPage = new BlueRentalPage();   // Class'tan Object olusturmaliyiz !!!!
         rentalPage.login.click();
         ReusableMethods.bekle(2);
         rentalPage.email.sendKeys(email, Keys.TAB, password, Keys.ENTER);
 
 
         // Login oldugumuzu dogrulayalim
-        Assert.assertTrue(rentalPage.loginVerify.isDisplayed());
+        Assert.assertTrue(rentalPage.loginVerify.getText().contains("Sam"));
+        /**
+            Login Webelementi login olduktan sonra da ayni locate'e dahip olabilme ihtimaline karsi
+         daha garanti bir dogrulama yapmak icin login olduktan sonra login WE'nin oldugu yerde login
+         oldugumuz kullanici ismi cikacaktir. Bu webelementin yazisini getText() methodu ile alip
+         kullanici ismini iceriyor mu icermiyor mu diye test ederiz.
+         */
 
         ReusableMethods.bekle(2);
 
