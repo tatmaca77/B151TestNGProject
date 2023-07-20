@@ -15,10 +15,14 @@ public class BlueRentalPage {
     public WebElement login;
 
     @FindBy(xpath = "//input[@type='email']")
-    public WebElement email;
+    public WebElement email;                                   // Locate degisirse sadece burdan düzeltmek yeterli olur.
 
     @FindBy (id = "dropdown-basic-button")
     public WebElement loginVerify;
+
+    @FindBy (id = "//*[@role='alert']")
+    public WebElement messageVerify;
+
 
 
 }
