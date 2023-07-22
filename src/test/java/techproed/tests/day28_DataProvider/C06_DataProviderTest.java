@@ -8,7 +8,12 @@ public class C06_DataProviderTest {
     /**
     dataProvider'i database veya excel gibi dusunebiliriz. Eger elimizde az miktarda veri varsa  bunu kullanabiliriz.
     Istersek 10 tane test methodu olusturup burdan istedigimiz veriyi cekip kullanabiliriz.
+     //ayni verileri ayni anda test02 methodu icinde kullanmak istiyoruz.
+     //(dataProvider = "Veriler") kismini tüm testlerin yanina yazariz.
+     //Tek method baglamak isteseydik, methodun yanina parantez acip (name) yazardik dün yaptik
      */
+
+
 
 
     @DataProvider
