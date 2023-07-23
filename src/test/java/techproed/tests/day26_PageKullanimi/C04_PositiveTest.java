@@ -19,7 +19,7 @@ public class C04_PositiveTest {
      */
 
 
-    @Test
+    @Test(groups = "smoke")   // XML Files icin isim verdik.
     public void test01() {
         //https://www.bluerentalcars.com/
         Driver.getDriver().get(ConfigReader.getProperty("blueRentalUrl"));

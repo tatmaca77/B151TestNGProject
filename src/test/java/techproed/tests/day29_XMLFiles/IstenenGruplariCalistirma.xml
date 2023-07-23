@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Istenen Gruplari Calistirma">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="techproed.tests.day26_PageKullanimi.C04_PositiveTest"/>
+            <class name="techproed.tests.day27_SmokeTest_Excel.C01_NegativeTest"/>
+        </classes>
+    </test>
+</suite>
+
+<!-- XML File ile istenilen gruplari calistrimak istersek <groups> tagin'dan sonra <run> tagi ile test class'imizda
+@Test Annotation'dan sonra belirttigimiz group ismini <include> tagi ile belirtiriz.
+     Sonra bu testler hangi Class icinde ise onlari belirtiriz. Iicndeki Testlerin yanina @Test(groups = "smoke")
+bu sekilde olusur. Yukaridaki örnekte oldugu gibi. -->

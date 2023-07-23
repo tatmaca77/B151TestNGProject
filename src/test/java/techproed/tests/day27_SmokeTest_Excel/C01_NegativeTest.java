@@ -21,19 +21,25 @@ public class C01_NegativeTest {
 //User with email fake@bluerentalcars.com not found
      */
 
-    @Test
+    @Test(groups = "smoke")
     public void test01() {
-        //https://www.bluerentalcars.com/ adresine gidelim negatif senaryo ile login olamadığımızı test edelim
+
+        //BlueRental sayfasına gidelim
         Driver.getDriver().get(ConfigReader.getProperty("blueRentalUrl"));
-        BlueRentalPage blueRentalPage = new BlueRentalPage();
-        blueRentalPage.login.click();
-        blueRentalPage.email.sendKeys(ConfigReader.getProperty("fake_email"), Keys.TAB,
-                ConfigReader.getProperty("fake_password"),Keys.TAB,Keys.ENTER);
-       ReusableMethods.visibleWait(blueRentalPage.messageVerify,5);
-        Assert.assertTrue(blueRentalPage.loginVerify.isDisplayed());
 
+        //Login butonuna tıklayınız
+        BlueRentalPage rentalPage = new BlueRentalPage();
+        rentalPage.login.click();
+        ReusableMethods.bekle(2);
+        rentalPage.email.sendKeys(ConfigReader.getProperty("fake_email"),Keys.TAB,
+                ConfigReader.getProperty("fake_password"), Keys.ENTER);
+
+        //Hata mesajının görünür olduğunu doğrula
+        ReusableMethods.visibleWait(rentalPage.messageVerify,5);
+        Assert.assertTrue(rentalPage.messageVerify.isDisplayed());
+
+        //Sayfayı kapatınız
         Driver.closeDriver();
-
 
     }
 }
