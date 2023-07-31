@@ -22,3 +22,8 @@
         icin listeners kullanmak istersek; <suite> tag'indan sonra <listeners> tag'i olusturup  sonrasinda <listener> tag'i
         olusturup listeners class'imizin yolunu belirtiriz. Böylece calistirdigimiz testlerde listeners yapisini kullanmis
         oluruz. -->
+
+        <!-- Listeners yapisi ile .Xml File üzerinden rapor alabiliriz. Bunun icin .xml file üzerinde sag click yapip
+              Modify Run Configuration sekmesine tiklayip sonrasinda Listeners bölümünden '+' isaretine basarak
+              arama bölümüne report yazarak ilk gelen reportu ekliyoruz. .Xml File'dan testlerimizi calistirdiktan sonra
+              test-output altinda raporumuzu görebiliriz. -->
