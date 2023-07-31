@@ -5,6 +5,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -177,5 +180,24 @@ public class ReusableMethods {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         String attribute_Value = (String) js.executeScript("return document.getElementById('" + id + "')." + attributeName);
         System.out.println("Attribute Value: = " + attribute_Value);
+    }
+    //File Upload Robot Class
+    public static void uploadFile(String dosyaYolu){
+        try{
+            bekle(3);
+            StringSelection stringSelection = new StringSelection(dosyaYolu);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.delay(3000);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(3000);
+        }catch (Exception ignored){
+
+        }
     }
 }
