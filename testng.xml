@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="techproed.utilities.Listeners"/>
+    </listeners>
+    <test name="C02.ListenersTest02.java">
+        <classes>
+            <class name="techproed.tests.day30_Listeners.C02_ListenersTest02">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day27_SmokeTest_Excel.C01_NegativeTest"/>
+        </classes>
+    </test>
+</suite>
+        <!-- .Xml file ile istedigimiz class ve methodlari calistirabiliriz. Bu calistirmak istedigimiz classlar ve methodlar
+        icin listeners kullanmak istersek; <suite> tag'indan sonra <listeners> tag'i olusturup  sonrasinda <listener> tag'i
+        olusturup listeners class'imizin yolunu belirtiriz. Böylece calistirdigimiz testlerde listeners yapisini kullanmis
+        oluruz. -->
