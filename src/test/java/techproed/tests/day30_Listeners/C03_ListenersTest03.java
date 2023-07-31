@@ -5,7 +5,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import techproed.utilities.Driver;
 
-@Listeners(techproed.utilities.Listeners.class)
+@Listeners(techproed.utilities.Listeners.class)//Bunu ekleyince fail olunca 1 kez daha calisir ve ITestListener methodlarini kullanir.
 public class C03_ListenersTest03 {
     /**
         Eger fail olan testlerimizi otomatik olarak belirttigimiz sayi kadar calistirmak istersek
